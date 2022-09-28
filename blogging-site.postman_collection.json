@@ -1,0 +1,254 @@
+{
+	"info": {
+		"_postman_id": "856acd67-863b-496c-a777-1c4a0b678db8",
+		"name": "Project-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20527530"
+	},
+	"item": [
+		{
+			"name": "createAuthors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"fname\": \"Samar\",\r\n    \"lname\":\"Biswas\",\r\n    \"title\": \"Mr\",\r\n    \"email\": \"snb@ergmail.com\",\r\n    \"password\": \"@1aaaaaA\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/authors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createBlogs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JJZCI6IjYzMjE5NzYwZGQ3YzhhZWNmYzllMTQ0MSIsImVtYWlsIjoickBlcmdtYWlsLmNvbSIsImlhdCI6MTY2MzE0NjI0OCwiZXhwIjoxNjYzMzYyMjQ4fQ.6Qy9hxMKoCECKKOurWjYvg7V48HU-UCooXlj2lhIO4s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Shayan\",\r\n  \"body\": \"Hello Shayan\",\r\n  \"category\": \"Hi\",\r\n  \"authorId\":\"63219760dd7c8aecfc9e1441\",\r\n  \"tags\": \"Hello\",\r\n  \"subcategory\": \"aa\",\r\n  \"isPublished\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/blogs",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBlogs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JJZCI6IjYzMjE1ODhmOTdjZjNkY2I4YjViMjM1NSIsImVtYWlsIjoickBlcmdtYWlsLmNvbSIsImlhdCI6MTY2MzEzMDA4MiwiZXhwIjoxNjYzMzQ2MDgyfQ.d9Cjgq2U5pMrSg9AF6JJ5gPEJSd-UjriSHGeL1a7hc0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/blogs?tags=Hello",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "Hello"
+						},
+						{
+							"key": "authorId",
+							"value": "631d8b666bbcb7758779ef3a",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBlogsByAnyField(QueryParams)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JJZCI6IjYzMWI5YTQwYTdmNjI0MmE4MTE0MGRiZiIsImdyb3VwIjoiNjkiLCJpYXQiOjE2NjI3NTM0Mjd9.915gEB257PfXN3BmcU7Cox1N5NLdGI28K0pyYyyq9AU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subcategory\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/blogs/631b9cb27b1c7160f493d435",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs",
+						"631b9cb27b1c7160f493d435"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBlogsByID(Params)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JJZCI6IjYzMjE5NzYwZGQ3YzhhZWNmYzllMTQ0MSIsImVtYWlsIjoickBlcmdtYWlsLmNvbSIsImlhdCI6MTY2MzE0NjI0OCwiZXhwIjoxNjYzMzYyMjQ4fQ.6Qy9hxMKoCECKKOurWjYvg7V48HU-UCooXlj2lhIO4s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/blogs/63219b0836dbfb39639c0046",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs",
+						"63219b0836dbfb39639c0046"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBlogsByAnyField(QueryParams)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRob3JJZCI6IjYzMjE5NzYwZGQ3YzhhZWNmYzllMTQ0MSIsImVtYWlsIjoickBlcmdtYWlsLmNvbSIsImlhdCI6MTY2MzE0NjI0OCwiZXhwIjoxNjYzMzYyMjQ4fQ.6Qy9hxMKoCECKKOurWjYvg7V48HU-UCooXlj2lhIO4s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/blogs?category=star",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"blogs"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "star"
+						},
+						{
+							"key": "authorId",
+							"value": "631df43182503fadbe97fd9a",
+							"disabled": true
+						},
+						{
+							"key": "gtdfg",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "subcategory",
+							"value": "hhh",
+							"disabled": true
+						},
+						{
+							"key": "isPublished",
+							"value": "false",
+							"disabled": true
+						},
+						{
+							"key": "tags",
+							"value": "world",
+							"disabled": true
+						},
+						{
+							"key": null,
+							"value": "hjgj",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorLogin",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"email\": \"sb@ergmail.com\",\r\n    \"password\": \"@1aaaaaA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
